@@ -19,7 +19,7 @@ export default function App() {
   const [kqth, setKqth] = useState(0);
   const [nofi, setNofi] = useState('');
   const [betLevel, setbetLevel] = useState(arrbet);
-  const [coin, setCoint] = useState(1000);
+  const [coin, setCoint] = useState(0);
   const [putCoin, setPutCoin] = useState(200);
   const play = (value) => {
     if (data?.length == 3 && coin >= 200 && coin >= putCoin) {
