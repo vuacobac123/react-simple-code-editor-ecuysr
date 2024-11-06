@@ -113,7 +113,7 @@ export default function App() {
   const reset = () => {
     setNofi('');
     setData(arr);
-    setResult('');
+    setResult(null);
   };
   const nap = (value) => {
     alert('chơi ngu mới phải nạp');
