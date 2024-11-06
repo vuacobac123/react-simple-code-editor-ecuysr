@@ -1,0 +1,94 @@
+.container {
+  display: flex;
+  height: 430px;
+  align-items: center;
+}
+.user {
+  width: 100%;
+}
+.user .icon {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px;
+}
+.boss {
+  display: flex;
+  align-items: center;
+}
+.boss .icon {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px;
+}
+.id1 {
+  background: red;
+}
+.id2 {
+  background: green;
+}
+.id3 {
+  background: yellow;
+}
+.reset {
+  text-align: center;
+}
+.reset button {
+  font-weight: 700;
+  border-radius: 30px;
+  padding: 10px;
+}
+.kq {
+  display: flex;
+  text-align: center;
+  width: 100%;
+  justify-content: center;
+}
+.kq p {
+  margin: 10px;
+}
+.kq :first-child {
+  color: green;
+}
+.kq1 {
+  color: rgb(12, 240, 12);
+}
+.kq2 {
+  color: rgb(208, 243, 10);
+}
+.kq3 {
+  color: rgb(250, 6, 6);
+}
+.boss {
+  color: black;
+  font-size: 20px;
+  box-shadow: 10px 0px black;
+}
+.bet-level {
+  width: 100%;
+  text-align: center;
+}
+.bet-level button {
+  margin: 10px;
+  font-size: 30px;
+  padding: 10px 20px;
+  border: 2px solid gray;
+  transition: transform 0.3s ease;
+}
+.bet-level button:hover {
+  transform: scale(1.2);
+}
+.btn-active {
+  background: gray;
+}
+
+.nap-pice button {
+  padding: 10px 20px;
+}
