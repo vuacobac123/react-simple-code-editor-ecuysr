@@ -19,7 +19,7 @@ export default function App() {
   const [kqth, setKqth] = useState(0);
   const [nofi, setNofi] = useState('');
   const [betLevel, setbetLevel] = useState(arrbet);
-  const [coin, setCoint] = useState(0);
+  const [coin, setCoint] = useState('');
   const [putCoin, setPutCoin] = useState(200);
   const play = (value) => {
     if (data?.length == 3 && coin >= 200 && coin >= putCoin) {
@@ -85,21 +85,22 @@ export default function App() {
     }
   };
   const nofication = (value) => {
+      let total= coin
     if (value == 'Hoa') {
       setKqhoa(kqhoa + 1);
       setNofi('Ban Hoa');
     } else if (value == 'Thang') {
       setKqthang(kqthang + 1);
       setNofi('Ban Thang');
-      let total = Number(coin) + Number(putCoin - 50);
+       total = Number(coin) + Number(putCoin - 50);
       setCoint(total);
     } else if (value == 'Thua') {
       setKqth(kqth + 1);
       setNofi('Ban Thua');
-      let total = Number(coin) - Number(putCoin);
+       total = Number(coin) - Number(putCoin);
       setCoint(total);
     }
-    localStorage.setItem('coin', coin);
+    localStorage.setItem('coin', total);
   };
 
   const joinMoney = (value, check) => {
@@ -122,14 +123,17 @@ export default function App() {
     localStorage.setItem('coin', newcoint);
   };
   useEffect(() => {
-    const coin = localStorage.getItem('coin');
-    if (coin > 0) {
-      setCoint(coin);
+    const coinn = localStorage.getItem('coin');
+    
+    if (coinn > 0) {
+      
+      setCoint(coinn);
     } else {
       localStorage.setItem('coin', 1000);
-      setCoint(setCoint(coin));
+      setCoint(setCoint('1000'));
     }
   }, []);
+
   return (
     <>
       <div className="kq">
